@@ -1,4 +1,6 @@
 (ns validador-cpf-clojure.base)
 
 (defn validar-cpf [cpf]
-    "validado")
+    (if-not (= (count cpf) 11)
+        false
+        true))

@@ -5,4 +5,4 @@
 
 (deftest a-test
   (testing "Testar a validação"
-    (is (= (base_validador/validar-cpf "321.123.123-22") "validado"))))
+    (is (= (base_validador/validar-cpf "321.123.123-22") false))))
