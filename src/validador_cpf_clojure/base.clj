@@ -3,4 +3,4 @@
 (defn validar-cpf [cpf]
     (if-not (= (count cpf) 11)
         false
-        true))
+        (reduce + (map read-string (re-seq #"\d" cpf))) ))
