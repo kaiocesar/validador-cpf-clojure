@@ -1,13 +1,13 @@
 (ns validador-cpf-clojure.base)
 
 
-(defn convert-cpf-to-int [cpf]
-    (map (fn [x] (Integer/parseInt x)) (re-seq #"\d" cpf)) )
+(defn str-to-int [string]
+    (map (fn [n] (Integer/parseInt n)) (re-seq #"\d" string)) )
 
-(defn calculo-dv-1 [cpf]
-    (map * (range 10 1 -1) (convert-cpf-to-int cpf)) )
+(defn calculo-dv [cpf val_start val_end]
+    (map * (range val_start val_end -1) (str-to-int cpf)) )
 
 (defn validar-cpf [cpf]
     (if-not (= (count cpf) 11)
         false
-        (calculo-dv-1 cpf) ))
+        (Math/ceil (/ (* (reduce + (calculo-dv cpf 10 1)) 10) 11)) ))
