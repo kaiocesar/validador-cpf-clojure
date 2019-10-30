@@ -8,4 +8,4 @@
     (is (= (base_validador/validar-cpf "321.123.123-22") false)))
     
   (testing "CPF inválido sem mascara"
-    (is (= (base_validador/validar-cpf "13498712322") false))))
+    (is (= (base_validador/validar-cpf "64318475042") false))))
