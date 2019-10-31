@@ -2,13 +2,14 @@
 
 ## composição do projeto
 Criar um projeto clojure com Lein: 
-    `lein new app validaor-cpf-clojure`
-
+    `lein new app validador-cpf-clojure`
 
 ## Utilização
 Execute: 
     `lein run`
 
+Teste unitário:
+    `lein test`
 
 
 ## Extra
