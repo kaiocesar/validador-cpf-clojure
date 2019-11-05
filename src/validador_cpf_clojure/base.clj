@@ -14,6 +14,7 @@
               cpfs_invalidos_conhecidos (map (fn [n] (apply str (repeat 11 n))) (range 0 10))]
             
             (if (and (= dv1 (Character/digit (get cpf 9) 10))
-                     (= dv2 (Character/digit (get cpf 10) 10)))
+                     (= dv2 (Character/digit (get cpf 10) 10))
+                     (= (count (filter (fn [c] (= c cpf)) cpfs_invalidos_conhecidos)) 0))
                 true
                 false))))
