@@ -11,6 +11,5 @@ Execute:
 Teste unitário:
     `lein test`
 
-
 ## Extra
 a ideia da concepção do algoritimo foi tirada desde [link](https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/) 
