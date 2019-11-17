@@ -1,5 +1,7 @@
 # Validador de CPF com clojure
 
+### versão 1.0.0
+
 ## composição do projeto
 Criar um projeto clojure com Lein: 
     `lein new app validador-cpf-clojure`
